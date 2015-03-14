@@ -26,7 +26,7 @@ modalVC.transitioningDelegate = self;
 [self presentViewController:modalVC animated:YES completion:nil];
 ```
 
-In your transitioning delegate implement the following to methods of `UIViewControllerTransitioningDelegate`:
+In your transitioning delegate implement the following methods of `UIViewControllerTransitioningDelegate`:
 
 ``` objective-c
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
