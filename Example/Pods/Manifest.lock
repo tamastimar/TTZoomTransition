@@ -1,0 +1,14 @@
+PODS:
+  - TTZoomTransition (1.0.0)
+
+DEPENDENCIES:
+  - TTZoomTransition (from `../`)
+
+EXTERNAL SOURCES:
+  TTZoomTransition:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TTZoomTransition: cb6c25b2c7d8e921813d003794790e28f2187bc5
+
+COCOAPODS: 0.36.0

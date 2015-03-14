@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQV-2O-oqT">
+                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="Modal View Controller" id="LGd-9L-gKC">
+                            <barButtonItem key="leftBarButtonItem" systemItem="stop" id="B0b-xr-wM3">
+                                <connections>
+                                    <action selector="dismissAction:" destination="-1" id="BzV-zK-6UX"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Q9X-Ck-RTM"/>
+                    </connections>
+                </navigationBar>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodland-656969_1280.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yST-zc-ZgU">
+                    <rect key="frame" x="0.0" y="180" width="600" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="EKZ-37-S4v"/>
+                        <constraint firstAttribute="width" constant="240" id="Fgh-e4-wyJ"/>
+                        <constraint firstAttribute="height" constant="360" id="jtW-YD-LtV"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Fgh-e4-wyJ"/>
+                            <exclude reference="jtW-YD-LtV"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.99743473529815674" green="0.88011705875396729" blue="0.64110618829727173" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="yST-zc-ZgU" secondAttribute="centerY" id="1bu-PD-v6t"/>
+                <constraint firstAttribute="centerX" secondItem="yST-zc-ZgU" secondAttribute="centerX" id="AgY-5V-kT1"/>
+                <constraint firstItem="gQV-2O-oqT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Quw-gT-mwf"/>
+                <constraint firstAttribute="trailing" secondItem="yST-zc-ZgU" secondAttribute="trailing" id="VpI-K9-eC1"/>
+                <constraint firstItem="gQV-2O-oqT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kWU-Hc-YIy"/>
+                <constraint firstItem="yST-zc-ZgU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lhD-y1-Rg8"/>
+                <constraint firstAttribute="trailing" secondItem="gQV-2O-oqT" secondAttribute="trailing" id="oZ4-Cb-5iI"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="woodland-656969_1280.jpg" width="1280" height="853"/>
+    </resources>
+</document>
