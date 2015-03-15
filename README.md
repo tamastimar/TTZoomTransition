@@ -62,9 +62,9 @@ Tamás Tímár
 - https://tamastmar.com
 - https://github.com/tamastimar
 
-# License
+## License
 
 `TTZoomTransition` is available under the [MIT license](https://choosealicense.com/licenses/mit/). See the LICENSE file for more info.
 
-# Acknowledgements
+## Acknowledgements
 Images in example are from [Pixabay](http://pixabay.com).
