@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60297D5C78F5024F911C3ADB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0142CEBE8AA53AEF0714D0E /* libPods.a */; };
+		679652DA6483DF74464A73F2 /* libPods-TTZoomTransitionExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DF3DC1958DFC983DA46A0 /* libPods-TTZoomTransitionExampleTests.a */; };
 		E048B47E1AACC5AA00B49C4E /* RootNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E048B47D1AACC5AA00B49C4E /* RootNavigation.storyboard */; };
 		E048B4821AACC62C00B49C4E /* woodland-656969_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E048B4811AACC62C00B49C4E /* woodland-656969_1280.jpg */; };
 		E048B4861AACC72300B49C4E /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E048B4841AACC72300B49C4E /* ModalViewController.m */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		25067FBA12536175761ACB20 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2C10341B2ED5F2F2362291A4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7CAF7E88417AD71BADD10FE4 /* Pods-TTZoomTransitionExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTZoomTransitionExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TTZoomTransitionExampleTests/Pods-TTZoomTransitionExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8ED3347A7180295536576498 /* Pods-TTZoomTransitionExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTZoomTransitionExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTZoomTransitionExampleTests/Pods-TTZoomTransitionExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		A0142CEBE8AA53AEF0714D0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E048B47D1AACC5AA00B49C4E /* RootNavigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RootNavigation.storyboard; sourceTree = "<group>"; };
 		E048B4811AACC62C00B49C4E /* woodland-656969_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "woodland-656969_1280.jpg"; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		E068BBDD1AAC5A8A001648B8 /* TTZoomTransitionExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTZoomTransitionExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E068BBE21AAC5A8A001648B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E068BBE31AAC5A8A001648B8 /* TTZoomTransitionExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTZoomTransitionExampleTests.m; sourceTree = "<group>"; };
+		E67DF3DC1958DFC983DA46A0 /* libPods-TTZoomTransitionExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TTZoomTransitionExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679652DA6483DF74464A73F2 /* libPods-TTZoomTransitionExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A0142CEBE8AA53AEF0714D0E /* libPods.a */,
+				E67DF3DC1958DFC983DA46A0 /* libPods-TTZoomTransitionExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,6 +93,8 @@
 			children = (
 				2C10341B2ED5F2F2362291A4 /* Pods.debug.xcconfig */,
 				25067FBA12536175761ACB20 /* Pods.release.xcconfig */,
+				7CAF7E88417AD71BADD10FE4 /* Pods-TTZoomTransitionExampleTests.debug.xcconfig */,
+				8ED3347A7180295536576498 /* Pods-TTZoomTransitionExampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -183,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E068BBEA1AAC5A8A001648B8 /* Build configuration list for PBXNativeTarget "TTZoomTransitionExampleTests" */;
 			buildPhases = (
+				A75C06D7A01D1E964D4539CC /* Check Pods Manifest.lock */,
 				E068BBD91AAC5A8A001648B8 /* Sources */,
 				E068BBDA1AAC5A8A001648B8 /* Frameworks */,
 				E068BBDB1AAC5A8A001648B8 /* Resources */,
+				E3004D02C87D2432950DCE4F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +296,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A75C06D7A01D1E964D4539CC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3004D02C87D2432950DCE4F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TTZoomTransitionExampleTests/Pods-TTZoomTransitionExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -432,6 +472,7 @@
 		};
 		E068BBEB1AAC5A8A001648B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CAF7E88417AD71BADD10FE4 /* Pods-TTZoomTransitionExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -451,6 +492,7 @@
 		};
 		E068BBEC1AAC5A8A001648B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ED3347A7180295536576498 /* Pods-TTZoomTransitionExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -8,7 +8,7 @@
   "platforms": {
     "ios": "7.0"
   },
-  "summary": "Simple zoom view controller transition.",
+  "summary": "A simple custom modal view controller transition.",
   "source": {
     "git": "https://github.com/tamastimar/TTZoomTransition.git",
     "tag": "1.0.0"
@@ -17,5 +17,5 @@
   "frameworks": "UIKit",
   "source_files": "TTZoomTransition",
   "requires_arc": true,
-  "social_media_url": "https://twitter.com/mattt"
+  "screenshots": "https://raw.githubusercontent.com/tamastimar/TTZoomTransition/assets/ttzoomtransition-screenshot.gif"
 }

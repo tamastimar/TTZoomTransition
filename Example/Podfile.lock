@@ -1,7 +1,18 @@
 PODS:
+  - Expecta (0.3.2)
+  - Expecta+Snapshots (1.3.2):
+    - Expecta (~> 0.3)
+    - FBSnapshotTestCase (= 1.6)
+  - FBSnapshotTestCase (1.6)
+  - OCMock (3.1.2)
+  - Specta (0.5.0)
   - TTZoomTransition (1.0.0)
 
 DEPENDENCIES:
+  - Expecta
+  - Expecta+Snapshots
+  - OCMock
+  - Specta
   - TTZoomTransition (from `../`)
 
 EXTERNAL SOURCES:
@@ -9,6 +20,11 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TTZoomTransition: cb6c25b2c7d8e921813d003794790e28f2187bc5
+  Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
+  Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
+  FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
+  OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
+  Specta: eb90708ed77569bbda089f8ead10bb99b8e9489e
+  TTZoomTransition: 65c67dcd0b6ca3c42c0a1922ec31b91dd95702eb
 
 COCOAPODS: 0.36.0
