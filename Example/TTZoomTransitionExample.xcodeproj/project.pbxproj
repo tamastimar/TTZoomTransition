@@ -19,7 +19,8 @@
 		E068BBD01AAC5A8A001648B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E068BBCF1AAC5A8A001648B8 /* ViewController.m */; };
 		E068BBD51AAC5A8A001648B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E068BBD41AAC5A8A001648B8 /* Images.xcassets */; };
 		E068BBD81AAC5A8A001648B8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E068BBD61AAC5A8A001648B8 /* LaunchScreen.xib */; };
-		E068BBE41AAC5A8A001648B8 /* TTZoomTransitionExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E068BBE31AAC5A8A001648B8 /* TTZoomTransitionExampleTests.m */; };
+		E0A92ABD1AD43C8A000ABB55 /* TransitioningSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A92ABB1AD43C8A000ABB55 /* TransitioningSpecs.m */; };
+		E0A92ABE1AD43C8A000ABB55 /* TTZoomTransitionSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A92ABC1AD43C8A000ABB55 /* TTZoomTransitionSpecs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,8 @@
 		E068BBD71AAC5A8A001648B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E068BBDD1AAC5A8A001648B8 /* TTZoomTransitionExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTZoomTransitionExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E068BBE21AAC5A8A001648B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E068BBE31AAC5A8A001648B8 /* TTZoomTransitionExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTZoomTransitionExampleTests.m; sourceTree = "<group>"; };
+		E0A92ABB1AD43C8A000ABB55 /* TransitioningSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitioningSpecs.m; sourceTree = "<group>"; };
+		E0A92ABC1AD43C8A000ABB55 /* TTZoomTransitionSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTZoomTransitionSpecs.m; sourceTree = "<group>"; };
 		E67DF3DC1958DFC983DA46A0 /* libPods-TTZoomTransitionExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TTZoomTransitionExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,7 +153,8 @@
 		E068BBE01AAC5A8A001648B8 /* TTZoomTransitionExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				E068BBE31AAC5A8A001648B8 /* TTZoomTransitionExampleTests.m */,
+				E0A92ABB1AD43C8A000ABB55 /* TransitioningSpecs.m */,
+				E0A92ABC1AD43C8A000ABB55 /* TTZoomTransitionSpecs.m */,
 				E068BBE11AAC5A8A001648B8 /* Supporting Files */,
 			);
 			path = TTZoomTransitionExampleTests;
@@ -346,7 +349,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E068BBE41AAC5A8A001648B8 /* TTZoomTransitionExampleTests.m in Sources */,
+				E0A92ABE1AD43C8A000ABB55 /* TTZoomTransitionSpecs.m in Sources */,
+				E0A92ABD1AD43C8A000ABB55 /* TransitioningSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
