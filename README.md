@@ -59,7 +59,7 @@ If you don't have [CocoaPods](http://cocoapods.org) on your machine, get it: `[s
 
 Tamás Tímár
 
-- https://tamastmar.com
+- https://tamastimar.com
 - https://github.com/tamastimar
 
 ## License
