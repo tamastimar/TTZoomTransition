@@ -1,7 +1,7 @@
 # TTZoomTransition
 
-[![Travis](https://img.shields.io/travis/tamastimar/TTZoomTransition.svg)]()
-[![Coveralls](https://img.shields.io/coveralls/tamastimar/TTZoomTransition.svg)]()
+[![Travis](https://img.shields.io/travis/tamastimar/TTZoomTransition.svg)](https://travis-ci.org/tamastimar/TTZoomTransition)
+[![Coveralls](https://img.shields.io/coveralls/tamastimar/TTZoomTransition.svg)](https://coveralls.io/r/tamastimar/TTZoomTransition)
 
 **`TTZoomTransition` is a custom modal view controller transition which displays the presented view controller by zoom animation.**
 
