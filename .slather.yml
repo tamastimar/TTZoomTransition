@@ -1,0 +1,3 @@
+coverage_service: coveralls
+xcodeproj: Example/TTZoomTransitionExample.xcodeproj
+source_directory: TTZoomTransition

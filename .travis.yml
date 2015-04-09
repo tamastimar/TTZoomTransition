@@ -1,5 +1,10 @@
 language: objective-c
+
+install: gem install slather -N
+
 xcode_workspace: Example/TTZoomTransitionExample.xcworkspace
 xcode_scheme: TTZoomTransitionExample
 xcode_sdk: iphonesimulator8.1
 xctool_args: -destination "platform=iOS Simulator,name=iPhone 6"
+
+after_success: slather
