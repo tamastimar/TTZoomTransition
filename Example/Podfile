@@ -1,5 +1,7 @@
 platform :ios, '7.0'
 
+plugin 'slather'
+
 pod 'TTZoomTransition', :path => '../'
 
 target 'TTZoomTransitionExampleTests' do
