@@ -37,6 +37,12 @@ SpecBegin(Transitioning)
 describe(@"Transitioning", ^{
     UIWindow* window = [UIApplication sharedApplication].keyWindow;
     
+    beforeAll(^{
+        NSString* filePath = [[NSString stringWithUTF8String:__FILE__] stringByDeletingLastPathComponent];
+        NSString* OSMajorVersion = [[[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."] firstObject];
+        setGlobalReferenceImageDir([[NSString stringWithFormat:@"%@/ReferenceImages/ios%@", filePath, OSMajorVersion] UTF8String]);
+     });
+    
     beforeEach(^{
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"RootNavigation" bundle:nil];
         window.rootViewController = [storyboard instantiateInitialViewController];
