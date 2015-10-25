@@ -2,6 +2,7 @@
 
 [![Travis](https://img.shields.io/travis/tamastimar/TTZoomTransition/master.svg)](https://travis-ci.org/tamastimar/TTZoomTransition)
 [![Coveralls](https://img.shields.io/coveralls/tamastimar/TTZoomTransition.svg)](https://coveralls.io/r/tamastimar/TTZoomTransition)
+[![CocoaPods](https://img.shields.io/cocoapods/v/TTZoomTransition.svg)](https://cocoapods.org/pods/TTZoomTransition)
 
 **`TTZoomTransition` is a custom modal view controller transition which displays the presented view controller by zoom animation.**
 
