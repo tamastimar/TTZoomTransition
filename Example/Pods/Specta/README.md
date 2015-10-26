@@ -4,6 +4,7 @@ A light-weight TDD / BDD framework for Objective-C.
 
 ### Status
 [![Build Status](https://travis-ci.org/specta/specta.png)](https://travis-ci.org/specta/specta)
+[![Coverage Status](https://coveralls.io/repos/specta/specta/badge.svg)](https://coveralls.io/r/specta/specta)
 
 ## FEATURES
 
@@ -30,8 +31,8 @@ Use [CocoaPods](http://github.com/CocoaPods/CocoaPods), [Carthage](https://githu
 	end
 
 	target :MyAppTests do
-	  pod 'Specta', '~> 0.5'
-	  # pod 'Expecta',     '~> 0.3'   # expecta matchers
+	  pod 'Specta', '~> 1.0'
+	  # pod 'Expecta',     '~> 1.0'   # expecta matchers
 	  # pod 'OCMock',      '~> 2.2'   # OCMock
 	  # pod 'OCHamcrest',  '~> 3.0'   # hamcrest matchers
 	  # pod 'OCMockito',   '~> 1.0'   # OCMock
@@ -46,7 +47,7 @@ Use [CocoaPods](http://github.com/CocoaPods/CocoaPods), [Carthage](https://githu
 1. Add Specta to your project's `Cartfile.private`
 
     ```
-    github "specta/specta" ~> 0.5
+    github "specta/specta" ~> 1.0
     ```
 
 2. Run `carthage update` in your project directory
@@ -63,6 +64,7 @@ Use [CocoaPods](http://github.com/CocoaPods/CocoaPods), [Carthage](https://githu
    For **iOS projects**, copy and add `Specta.framework` in `Products/ios` folder to the test target in your Xcode project.
    You can alternatively use `libSpecta.a`, if you prefer to add it as a static library for your project. (iOS 7 and below require this)
 6. Add `-ObjC` and `-all_load` to the "Other Linker Flags" build setting for the test target in your Xcode project.
+7. If you encounter linking issues with `_llvm_*` symbols, ensure your target's "Generate Test Coverage Files" and "Instrument Program Flow" build settings are set to `Yes`.
 
 ## EXAMPLE
 
