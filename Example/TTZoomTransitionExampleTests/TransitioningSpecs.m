@@ -37,10 +37,11 @@ SpecBegin(Transitioning)
 describe(@"Transitioning", ^{
     UIWindow* window = [UIApplication sharedApplication].keyWindow;
     
+    // own reference directory for every iOS version
     beforeAll(^{
         NSString* filePath = [[NSString stringWithUTF8String:__FILE__] stringByDeletingLastPathComponent];
         NSString* OSMajorVersion = [[[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."] firstObject];
-        setGlobalReferenceImageDir([[NSString stringWithFormat:@"%@/ReferenceImages/ios%@", filePath, OSMajorVersion] UTF8String]);
+        setGlobalReferenceImageDir((char*)[[NSString stringWithFormat:@"%@/ReferenceImages/ios%@", filePath, OSMajorVersion] UTF8String] ?: "");
      });
     
     beforeEach(^{
