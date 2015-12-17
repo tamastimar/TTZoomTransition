@@ -10,4 +10,6 @@ env:
 
 script: xctool -destination "$DESTINATION" -workspace Example/TTZoomTransitionExample.xcworkspace -scheme TTZoomTransitionExample -sdk iphonesimulator9.1 build test
 
-after_success: slather
+after_success:
+  - slather
+  - bash <(curl -s https://codecov.io/bash) -f cobertura_output/cobertura.xml
