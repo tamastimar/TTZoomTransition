@@ -1,3 +1,4 @@
-coverage_service: coveralls
+coverage_service: cobertura_xml
 xcodeproj: Example/TTZoomTransitionExample.xcodeproj
 source_directory: TTZoomTransition
+output_directory: cobertura_output
