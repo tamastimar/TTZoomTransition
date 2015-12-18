@@ -2,7 +2,7 @@ language: objective-c
 
 osx_image: xcode7.1
 
-install: gem install slather -N
+install: gem install slather -v 1.8.2 -N
 
 env:
   - DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=9.1"
