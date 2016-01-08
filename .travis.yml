@@ -2,8 +2,7 @@ language: objective-c
 
 osx_image: xcode7.1
 
-before_install: rvm use $RVM_RUBY_VERSION
-install: gem install slather -v 1.8.2 -N
+install: gem install slather -v 1.8.1 -N
 
 env:
   - DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=9.1"
