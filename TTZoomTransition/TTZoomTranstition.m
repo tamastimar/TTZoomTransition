@@ -23,6 +23,10 @@
 
 #import "TTZoomTranstition.h"
 
+static const CGFloat kPresentedZoomInScale = 0.75;
+static const CGFloat kPresentedZoomOutScale = 0.952;
+static const CGFloat kPresentingZoomScale = 1.05;
+
 @implementation TTZoomTranstition
 
 - (instancetype)init
@@ -42,55 +46,71 @@
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-    UIViewController* toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    UIViewController* fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    
-    // snapshot to get nicer animations
-    UIView* fromSnapshot = [self.isPresenting ? fromViewController.view : toViewController.view snapshotViewAfterScreenUpdates:NO];
-    
-    CGFloat toZoomInScale = 0.75;
-    CGFloat toZoomOutScale = 0.952;
-    CGFloat fromZoomScale = 1.05;
-    
     if (self.isPresenting)
     {
-        [[transitionContext containerView] addSubview:fromSnapshot];
-        
-        toViewController.view.frame = [transitionContext containerView].bounds;
-        [[transitionContext containerView] addSubview:toViewController.view];
-        
-        toViewController.view.transform = CGAffineTransformMakeScale(toZoomInScale, toZoomInScale);
-        toViewController.view.alpha = 0.0;
-        
-        [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-            toViewController.view.transform = CGAffineTransformIdentity;
-            toViewController.view.alpha = 1.0;
-            
-            fromSnapshot.transform = CGAffineTransformMakeScale(fromZoomScale, fromZoomScale);
-        } completion:^(BOOL finished) {
-            [fromSnapshot removeFromSuperview];
-            
-            [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-        }];
+        [self doPresentingAnimationInContext:transitionContext];
     }
     else
     {
-        fromSnapshot.transform = CGAffineTransformMakeScale(fromZoomScale, fromZoomScale);
-        [[transitionContext containerView] addSubview:fromSnapshot];
-        [[transitionContext containerView] sendSubviewToBack:fromSnapshot];
-        
-        [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            fromViewController.view.transform = CGAffineTransformMakeScale(toZoomOutScale, toZoomOutScale);
-            fromViewController.view.alpha = 0.0;
-            
-            fromSnapshot.transform = CGAffineTransformIdentity;
-        } completion:^(BOOL finished) {
-            [fromSnapshot removeFromSuperview];
-            
-            [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-        }];
+        [self doDismissingAnimationInContext:transitionContext];
     }
+}
+
+- (void)doPresentingAnimationInContext:(id <UIViewControllerContextTransitioning>)transitionContext
+{
+    UIView* transitionContainerView = [transitionContext containerView];
     
+    // use snapshot of presenting vc (maybe direct transformation was bugous?)
+    UIView* presentingSnapshot = [self snapshotPresentingViewControllerInContext:transitionContext];
+    [transitionContainerView addSubview:presentingSnapshot];
+    
+    UIView* presentedView = [transitionContext viewForKey:UITransitionContextToViewKey];
+    presentedView.frame = [transitionContext containerView].bounds;
+    presentedView.transform = CGAffineTransformMakeScale(kPresentedZoomInScale, kPresentedZoomInScale);
+    presentedView.alpha = 0.0;
+    [transitionContainerView addSubview:presentedView];
+    
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        presentedView.transform = CGAffineTransformIdentity;
+        presentedView.alpha = 1.0;
+        
+        presentingSnapshot.transform = CGAffineTransformMakeScale(kPresentingZoomScale, kPresentingZoomScale);
+    } completion:^(BOOL finished) {
+        [presentingSnapshot removeFromSuperview];
+        
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+    }];
+}
+
+- (void)doDismissingAnimationInContext:(id <UIViewControllerContextTransitioning>)transitionContext
+{
+    UIView* transitionContainerView = [transitionContext containerView];
+    UIView* presentedView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+    
+    // use snapshot of presenting vc (maybe direct transformation was bugous?)
+    UIView* presentingSnapshot = [self snapshotPresentingViewControllerInContext:transitionContext];
+    presentingSnapshot.transform = CGAffineTransformMakeScale(kPresentingZoomScale, kPresentingZoomScale);
+    [transitionContainerView addSubview:presentingSnapshot];
+    [transitionContainerView sendSubviewToBack:presentingSnapshot];
+    
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        presentedView.transform = CGAffineTransformMakeScale(kPresentedZoomOutScale, kPresentedZoomOutScale);
+        presentedView.alpha = 0.0;
+        
+        presentingSnapshot.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+        [presentingSnapshot removeFromSuperview];
+        
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+    }];
+}
+
+- (UIView*)snapshotPresentingViewControllerInContext:(id <UIViewControllerContextTransitioning>)transitionContext
+{
+    UITransitionContextViewControllerKey vcKey = self.isPresenting ? UITransitionContextFromViewControllerKey : UITransitionContextToViewControllerKey;
+    
+    // on iOS 10 transitionContext.viewController.view has to be used, transitionContext.view results blank snapshot
+    return [[transitionContext viewControllerForKey:vcKey].view snapshotViewAfterScreenUpdates:false];
 }
 
 @end
