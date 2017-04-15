@@ -1,11 +1,4 @@
-//
-//  EXPMatchers+FBSnapshotTest.h
-//  Artsy
-//
-//  Created by Daniel Doubrovkine on 1/14/14.
-//  Copyright (c) 2014 Artsy Inc. All rights reserved.
-//
-
+#import <CoreGraphics/CoreGraphics.h>
 #import <Expecta/Expecta.h>
 #import "ExpectaObject+FBSnapshotTest.h"
 
@@ -20,3 +13,6 @@ EXPMatcherInterface(recordSnapshot, (void));
 
 EXPMatcherInterface(haveValidSnapshotNamed, (NSString *snapshot));
 EXPMatcherInterface(recordSnapshotNamed, (NSString *snapshot));
+
+EXPMatcherInterface(haveValidSnapshotNamedWithTolerance, (NSString *snapshot, CGFloat tolerance));
+EXPMatcherInterface(haveValidSnapshotWithTolerance, (CGFloat tolerance));
