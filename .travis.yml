@@ -7,7 +7,6 @@ install: gem install slather -N
 env:
   - DESTINATION="platform=iOS Simulator,name=iPhone 6s,OS=10.3"
   - DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=9.3"
-  - DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=8.1"
 
 script: xcodebuild -destination "$DESTINATION" -workspace Example/TTZoomTransitionExample.xcworkspace -scheme TTZoomTransitionExample -sdk iphonesimulator10.3 build test
 

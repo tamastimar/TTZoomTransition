@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.frameworks   = 'UIKit'
   s.source_files = 'TTZoomTransition'
   s.requires_arc = true
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '9.0'
   s.screenshot  = 'https://raw.githubusercontent.com/tamastimar/TTZoomTransition/assets/ttzoomtransition-screenshot.gif'
 end

@@ -57,7 +57,7 @@ If you don't have [CocoaPods](http://cocoapods.org) on your machine, get it: `[s
 
 ## Requirements
 
-- iOS 7+
+- iOS 9+
 
 ## Contact
 
