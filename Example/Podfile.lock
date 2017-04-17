@@ -1,12 +1,13 @@
 PODS:
-  - Expecta (1.0.3)
-  - Expecta+Snapshots (2.0.0):
+  - Expecta (1.0.5)
+  - Expecta+Snapshots (3.1.1):
     - Expecta (~> 1.0)
-    - FBSnapshotTestCase/Core (~> 2.0.3)
-  - FBSnapshotTestCase/Core (2.0.5)
-  - OCMock (3.2)
-  - Specta (1.0.4)
-  - TTZoomTransition (1.0.1)
+    - FBSnapshotTestCase/Core (~> 2.0)
+    - Specta (~> 1.0)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - OCMock (3.4)
+  - Specta (1.0.6)
+  - TTZoomTransition (1.0.2)
 
 DEPENDENCIES:
   - Expecta
@@ -20,11 +21,13 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
-  Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
-  FBSnapshotTestCase: 6917deb01d0556dd544536f9eb34e0cf26f904d5
-  OCMock: 28def049ef47f996b515a8eeea958be7ccab2dbb
-  Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
-  TTZoomTransition: de4f7be198871c44319c0605252d1d714a6cb3b4
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  Expecta+Snapshots: dcff217eef506dabd6dfdc7864ea2da321fafbb8
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
+  Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
+  TTZoomTransition: d591a48bea2edaa692540f50b20e04a81a86b0a4
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: a511b209d85ae52b5f696c81f251f98eaadfe94c
+
+COCOAPODS: 1.2.1
