@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'TTZoomTransition'
-  s.version      = '1.0.2'
+  s.version      = '1.0.3'
   s.authors      = { 'Tamás Tímár' => 'hello@tamastimar.com' }
   s.homepage     = 'https://github.com/tamastimar/TTZoomTransition'
   s.platform     = :ios
